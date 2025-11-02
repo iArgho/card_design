@@ -8,7 +8,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Card Design'),
+        title: const Text(
+          'Card Design',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Padding(padding:  const EdgeInsets.all(16.0), child: Center(
         child: Column(
@@ -16,6 +19,15 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Cards(),
+                Cards()
+              
+              ],
+            ),
+            SizedBox(height: 16),
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Cards(),

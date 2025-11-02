@@ -9,7 +9,7 @@ class Cards extends StatelessWidget {
 
     return Container(
       width: MediaQuery.of(context).size.width * 0.45,
-      height: 250,
+   
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadiusValue),
         border: Border.all(
@@ -31,7 +31,7 @@ class Cards extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 8),
          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -71,7 +71,7 @@ class Cards extends StatelessWidget {
                 padding: const EdgeInsets.all(3),
                 decoration: const BoxDecoration(
   color: Color.fromARGB(255, 192, 192, 192),
-  
+
                   borderRadius: BorderRadius.all(Radius.circular(4)),
                 ),
                 child: const Text(
@@ -85,18 +85,40 @@ class Cards extends StatelessWidget {
              ),
             ],
           ),
-          const SizedBox(height: 8),
+        
+          Divider(
+  color: const Color.fromARGB(255, 212, 212, 212),
+  thickness: 1,       
+      
+),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Text(
-              'This is a sample description for the card.',
-              textAlign: TextAlign.center,
+              'Full Stack Web Development with Ostad',
+              textAlign: TextAlign.start,
               style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey,
+                fontSize: 16,
+                fontWeight: FontWeight.bold
               ),
             ),
           ),
+          Container(
+            margin: const EdgeInsets.all(8),
+            padding: const EdgeInsets.symmetric(vertical: 6),
+            decoration: BoxDecoration(
+               color: Color.fromARGB(255, 192, 192, 192),
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: const Center(
+              child: Text(
+                'More Info →',
+                style: TextStyle(
+   
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ), 
+          )
         ],
       ),
     );
